@@ -22,3 +22,12 @@ def get_account(index=None, id=None):
     if id:
         return accounts.load(id)
     return accounts.add(config["wallets"]["from_key"])
+
+
+def get_crowd_sale_info(crowd_sale_contract):
+    print('\nCROWD SALE CONTRACT INFO:')
+    print('\tCrowd Sale Address: ', crowd_sale_contract.token())
+    print('\tToken Address: ', crowd_sale_contract.token())
+    print('\tWallet Address: ', crowd_sale_contract.wallet())
+    print('\tRate: ', crowd_sale_contract.rate(), "MUN/ETH")
+    print()
