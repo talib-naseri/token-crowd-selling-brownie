@@ -1,7 +1,8 @@
 from brownie import (
     network,
     accounts,
-    config
+    config,
+    interface
 )
 import time
 
@@ -31,3 +32,7 @@ def get_crowd_sale_info(crowd_sale_contract):
     print('\tWallet Address: ', crowd_sale_contract.wallet())
     print('\tRate: ', crowd_sale_contract.rate(), "MUN/ETH")
     print()
+
+
+def get_token_balance(token_address, user_address):
+    return interface.IERC20(token_address).balanceOf(user_address)
