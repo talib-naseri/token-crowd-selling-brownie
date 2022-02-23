@@ -1,7 +1,7 @@
 from brownie import (
     network,
     accounts,
-    config,
+    config
 )
 import time
 
